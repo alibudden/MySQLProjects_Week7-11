@@ -14,13 +14,13 @@ public class DbConnection {
 	private static final int PORT = 3306;
 	
 	public static Connection getConnection() {
-		String url = String.format("jdbc:mysql://%s:%d/%s?user=%s&password=%s&useSSL=false", HOST, PORT, SCHEMA, USER, PASSWORD);
+	String url = String.format("jdbc:mysql://%s:%d/%s?user=%s&password=%s&useSSL=false", HOST, PORT, SCHEMA, USER, PASSWORD);
 	
-		System.out.println("Connecting with url=" + url);
+		
 		
 		try {
 			Connection conn = DriverManager.getConnection(url);
-			System.out.println("Successfully obtained connection!");
+			System.out.println("Connection to schema 'project' is successful.");
 			return conn;
 		} catch (SQLException e) {
 			System.out.println("Error getting Connection.");
